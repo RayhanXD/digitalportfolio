@@ -27,6 +27,15 @@ export default function App() {
           <h2 id='hey'>Hey, my name is</h2>
           <h1>RAYHAN MOHAMMAD</h1>
           <h2 id='am'>I am a... <span className="animated-word" id="changingrad">{currentWord}</span></h2>
+          <div className="more">
+            <h3>Find out more about me</h3>
+            <span class="material-symbols-outlined">
+              keyboard_arrow_down
+            </span>
+          </div>
+        </section>
+        <section className='about'>
+          
         </section>
       </div>
     </body>

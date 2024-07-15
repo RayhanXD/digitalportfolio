@@ -96,6 +96,49 @@ body {
         }
       }
 
+      .more {
+
+        margin-top: 75px;
+        display: flex;
+        align-items: center;
+
+        h3 {
+          @include title-sm;
+          color: white;
+          display: inline-block;
+        }
+
+        span {
+          background-image: linear-gradient(45deg, #F27D33, #C83F58);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          font-size: 96px;
+          animation: bounce 1.8s linear infinite;
+        }
+
+        @keyframes bounce {
+          0%, 100% {
+            transform: translateY(-5%);
+          }
+          25% {
+            transform: translateY(5px);
+          }
+          50% {
+            transform: translateY(-5%);
+          }
+          75% {
+            transform: translateY(5px);
+          }
+        }
+
+        @media (max-width: 1080px) {
+          span {
+            font-size: 48px;
+          }
+        }
+      }
+
       @media (max-width: 1080px) {
         h2 {
           @include title-xs;
@@ -105,6 +148,7 @@ body {
           @include title-md;
           text-align: left;
         }
+        
       }
     }
     @media (max-width: 1080px) {
