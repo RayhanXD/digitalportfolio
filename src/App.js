@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import './App.scss';
 
-function App() {
+const words = ["AI Engineer", "Software Developer", "Creative Learner"]; // Add more words as needed
+
+export default function App() {
+  const [currentWord, setCurrentWord] = useState(words[0]);
+  const [index, setIndex] = useState(0);
+  
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % words.length;
+        setCurrentWord(words[newIndex]);
+        return newIndex;
+      });
+    }, 2400); // Match the interval with the animation duration
+
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+      <div className='content'>
+        <section className='home'>
+          <h2 id='hey'>Hey, my name is</h2>
+          <h1>RAYHAN MOHAMMAD</h1>
+          <h2 id='am'>I am a... <span className="animated-word" id="changingrad">{currentWord}</span></h2>
+        </section>
+      </div>
+    </body>
   );
 }
-
-export default App;

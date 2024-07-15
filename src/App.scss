@@ -1,0 +1,119 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  background-color: black;
+  // border: 5px solid #FF0000; // bright red border
+
+  .content {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(200, 63, 88, 0.25) 50%, rgba(242, 125, 51, 0.25) 100%);
+    background-color: black;
+    width: 100svw;
+    height: 400svh;
+
+    .home {
+      padding: 100px;
+
+      h2 {
+        @include title-md;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: auto;
+        padding: 20px;
+        color: white;
+        display: inline-block;
+      }
+
+      #hey {
+        transform: translateX(-2.5%);
+        margin-bottom: 15px;
+      }
+      #am {
+        transform: translateX(500px);
+      }
+
+      @media (max-width: 1080px) {
+        #am {
+          transform: translateX(0px);
+        }
+      }
+
+      @keyframes fadeInOutTopBottom {
+        0% {
+          opacity: 0;
+          transform: translateY(15%);
+        }
+        25% {
+          opacity: 1;
+          transform: translateY(25%);
+        }
+        75% {
+          opacity: 1;
+          transform: translateY(25%);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(35%);
+        }
+      }
+      
+      .animated-word {
+        animation: fadeInOutTopBottom 2.4s linear infinite;
+        display: inline-block;
+        overflow: hidden;
+      }
+      #changingrad {
+        background: linear-gradient(45deg, #F27D33, #C83F58); 
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        @include title-xl;
+        background-image: linear-gradient(
+            -225deg,
+            $secondary-color 0%,
+            $primary-color 100%,
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 3s linear infinite;
+      }
+      @keyframes textclip {
+        from {
+          background-position: 100% center;
+        }
+        to {
+          background-position: -100% center;
+        }
+      }
+
+      @media (max-width: 1080px) {
+        h2 {
+          @include title-xs;
+          padding: 0px;
+        }
+        h1 {
+          @include title-md;
+          text-align: left;
+        }
+      }
+    }
+    @media (max-width: 1080px) {
+      .home {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+}

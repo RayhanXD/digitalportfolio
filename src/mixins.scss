@@ -1,0 +1,40 @@
+@mixin title-xl {
+    font-family: 'Manrope', sans-serif;
+    font-size: 112px;
+    font-weight: 600;
+}
+
+@mixin title-md {
+    font-family: 'Manrope', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    @media screen and (max-width: 1080px) {
+        font-size: 48px;
+    }
+}
+
+@mixin title-xs {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@mixin paragraph-md {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+
+    @media screen and (max-width: 585px) {
+        font-size: 12px;
+    }
+}
+
+@mixin paragraph-lg {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+
+    @media screen and (max-width: 585px) {
+        font-size: 16px;
+    }
+}
