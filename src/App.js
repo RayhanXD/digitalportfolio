@@ -23,6 +23,13 @@ export default function App() {
   return (
     <body>
       <div className='content'>
+        <section className='nav'>
+        <div className='marks'>
+          <p>Home</p>
+          <div className='circle'></div>
+        </div>
+          <div className='line'></div>
+        </section>
         <section className='home'>
           <h2 id='hey'>Hey, my name is</h2>
           <h1>RAYHAN MOHAMMAD</h1>
@@ -35,7 +42,7 @@ export default function App() {
           </div>
         </section>
         <section className='about'>
-          
+
         </section>
       </div>
     </body>

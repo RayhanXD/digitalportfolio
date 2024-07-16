@@ -10,9 +10,65 @@ body {
     background-color: black;
     width: 100svw;
     height: 400svh;
+  
+    .nav {
+      position: absolute; // or 'fixed' if you want it to stay in place on scroll
+      right: 0; // Align to the right side of the screen
+      top: 0;
+      height: 100vh; // Full height of the viewport
+      width: 1px; // Width of the nav line
+      padding-right: 5%;
+      padding-top: 5%;
+
+      .marks {
+        display: flex;
+        align-items: center;
+        // border: 5px solid #FFD700; // yellow border
+        gap: 25px;
+        position: absolute;
+        transform: translate(-75%, -72.5%);
+        p {
+
+          @include paragraph-lg;
+          color: white;
+        }
+      }
+    
+      .line {
+        height: 380%;
+        width: 100%;
+        background-color: white;
+        opacity: .5;
+        z-index: -1;
+      }
+
+      .circle {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 2px solid white;
+        opacity: 0.5;
+        transform: translateX(-45%);
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .nav {
+        padding-top: 19%;
+        padding-right: 10%;
+      }
+    }
+
+    @media (max-width: 1080px) {
+      #am {
+        transform: translateX(0px);
+      }
+    }
 
     .home {
       padding: 100px;
+      // border: 5px solid #FFD700; // eyellow border
 
       h2 {
         @include title-md;
@@ -22,6 +78,14 @@ body {
         padding: 20px;
         color: white;
         display: inline-block;
+      }
+
+      p {
+        @include paragraph-lg;
+        color: white;
+        float: right;
+        transform: translateY(-110%);
+        margin: 0;
       }
 
       #hey {
