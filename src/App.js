@@ -46,6 +46,10 @@ export default function App() {
       <div className='tracking_circle'></div>
       <div className='content'>
         <section className='nav'>
+        <div className='mark2'>
+            <p>About Me</p>
+            <div className='circle2'></div>
+          </div>
         <div className='marks'>
           <p>Home</p>
           <div className='circle' ref={circleRef}></div>
@@ -57,14 +61,13 @@ export default function App() {
           <h1>RAYHAN MOHAMMAD</h1>
           <h2 id='am'>I am a... <span className="animated-word" id="changingrad">{currentWord}</span></h2>
           <div className="more">
-            <h3>Find out more about me</h3>
-            <span class="material-symbols-outlined">
-              keyboard_arrow_down
-            </span>
+            <h3>Scroll for more</h3>
+              <span className="material-symbols-outlined">
+                keyboard_arrow_down
+              </span>
           </div>
         </section>
         <section className='about'>
-
         </section>
       </div>
     </body>
