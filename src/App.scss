@@ -2,6 +2,19 @@
 @import 'mixins';
 
 body {
+
+  .tracking_circle {
+    position: fixed; // Keep it fixed
+    display: flex;
+    height: 15px; // Match the height of .circle
+    width: 15px; // Match the width of .circle
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    z-index: 2;
+    transform: translate(30%, 30%);
+  }
+
   background-color: black;
   // border: 5px solid #FF0000; // bright red border
 
@@ -27,6 +40,7 @@ body {
         gap: 25px;
         position: absolute;
         transform: translate(-75%, -72.5%);
+        z-index: 1;
         p {
 
           @include paragraph-lg;
@@ -50,6 +64,7 @@ body {
         border: 2px solid white;
         opacity: 0.5;
         transform: translateX(-45%);
+        z-index: 1;
       }
     }
 
