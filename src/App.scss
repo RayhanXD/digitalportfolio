@@ -38,7 +38,7 @@ body {
         align-items: center;
         width: 150px;
         gap: 15px;
-        transform: translate(-65%, 100svh);
+        transform: translate(-65%, 1455%);
         position: absolute;
         z-index: 1;
         p {
@@ -266,9 +266,189 @@ body {
     }
 
     .about {
+
       // border: 1px solid yellow;
       height: 100vh;
       width: 100vw;
+      display: flex;
+      align-items: center;
+      padding: 0;
+
+      .title {
+        @include title-md;
+        color: white;
+        // border: 1px solid yellow;
+        transform: rotate(-90deg);
+        transform-origin: left top center;
+        margin-left: -1%;
+        margin-right: -4%;
+      }
+
+      .grid-container {
+        // border: 1px solid yellow;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        position: relative;
+        width: 70%;
+        height: 80%;
+                
+        .grid-item {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          color: white;
+          border-radius: 30px;
+          background-color: transparent;
+          position: relative;
+          opacity: 9;
+          border: .5px solid rgba(255, 255, 255, 0.15); // Set the border opacity to .5
+          z-index: 1;
+          background: linear-gradient(to bottom right, rgba(242, 125, 51, 0.3), rgba(200, 63, 88, 0.3) 60%);
+          background-attachment: fixed; // This will give the illusion of a continuous gradient across items
+          box-shadow: 0px 8px 12px rgba(0, 0, 0, .15);
+        }
+
+        .grid-content {
+          
+          padding: 12.5%;
+          overflow: hidden;
+          // border: 1px solid yellow;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 85%;
+            border-radius: 50%;
+          }
+
+          h1 {  
+
+            color: black;
+            @include title-sm;
+            font-weight: 300;
+          }
+
+          div {
+
+            overflow: hidden;
+            background-image: url('../public/blackfolder.png'); /* Use the PUBLIC_URL placeholder */
+            background-size: cover; /* Cover the entire space of the element */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            // border: 1px solid yellow;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+
+            ul {
+
+              list-style-type: square;
+              padding: 10;
+              padding-top: 12.5%;
+              opacity: .75;
+
+              li {
+                @include paragraph-md;
+                text-transform: uppercase;
+              }
+            }
+          }
+
+          .gradientName {
+
+            font-weight: 600;
+            background-image: linear-gradient(to right, $primary-color, $secondary-color, $primary-color, $secondary-color, $primary-color, $secondary-color);
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            color: transparent;
+            background-size: 500%;
+            background-position: -1000%;  
+            animation: animatedText 100s infinite;
+          }
+
+          @keyframes animatedText {
+            to {
+              background-position: 1000%; 
+            }
+          }
+
+          .bold {
+
+            color: white;
+            opacity: .75;
+            font-weight: bold;
+          }
+        }
+
+        .verticalContentTop {
+
+          margin-top: 17.5%;
+
+        }
+
+        .verticalContentBottom {
+
+          margin-bottom: 17.5%;
+        }
+
+        .horizantalContentLeft {
+
+          padding-left: 17.5%;
+        }
+
+        .horizantalContentRight {
+
+          padding-right: 25%;
+          text-align: right;
+
+        }
+
+        .vertical {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(2, 1fr);
+        }
+
+        .horizantal {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 1fr;
+        }
+
+        #item1 {
+          grid-row: 1 / span 2;
+          grid-column: 1;
+          background-color: black;
+        }
+        #item2 {
+          grid-column: 2 / span 2;
+          grid-row: 1;
+          background-color: black;
+        }
+        #item3 {
+          grid-row: 1 / span 2;
+          grid-column: 4;
+          background-color: black;
+        }
+        #item4 {
+          grid-column: 2 / span 2;
+          grid-row: 2;
+          background-color: black;
+        }
+        #item5 {
+          grid-column: 1 / span 2;
+          grid-row: 3;
+          background-color: black;
+        }
+        #item6 {
+          grid-column: 3 / span 2;
+          grid-row: 3;
+          background-color: black;
+        }
+      }
     }
   }
 }

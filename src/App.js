@@ -67,7 +67,53 @@ export default function App() {
               </span>
           </div>
         </section>
-        <section className='about'>
+        <section className='about' id='about'>
+          <h1 className='title'>This is me</h1>
+          <div className="grid-container">
+            <div className="grid-item vertical" id="item1">
+              <div className="grid-content verticalContentTop">
+                <h1>Hey, i'm <span className="gradientName">Rayhan Mohammad</span></h1>
+                </div>
+              <div className="grid-content verticalContentBottom">
+                <h1>I have an <span className="gradientName">inlimitable</span> passion for AI & CS</h1>
+              </div>
+            </div>
+            <div className="grid-item horizantal" id="item2">
+              <div className="grid-content horizantalContentLeft">
+                <div>
+                    <ul>
+                      <li><span className="gradientName">fullstack</span></li>
+                      <li><span className="gradientName">web apps</span></li>
+                      <li><span className="gradientName">SAAS</span></li>
+                      <li><span className="gradientName">ai driven apps</span></li>
+                    </ul>
+                  </div>
+              </div>
+              <div className="grid-content horizantalContentRight">
+                <h1>I love building a variety of applications.</h1>
+              </div>
+            </div>
+            <div className="grid-item vertical" id="item3">
+              <div className="grid-content verticalContent">3A</div>
+              <div className="grid-content verticalContent">3B</div>
+            </div>
+            <div className="grid-item horizantal" id="item4">
+              <div className="grid-content horizantalContentLeft">
+                <img src={`${process.env.PUBLIC_URL}/bestpfp.png`} alt="Profile" />
+              </div>
+              <div className="grid-content horizantalContentRight">
+                <h1>This is <span className="bold">everything</span> about me.</h1>
+              </div>
+            </div>
+            <div className="grid-item horizantal" id="item5">
+              <div className="grid-content horizantalContentLeft">5A</div>
+              <div className="grid-content horizantalContentRight">5B</div>
+            </div>
+            <div className="grid-item horizantal" id="item6">
+              <div className="grid-content horizantalContentLeft">6A</div>
+              <div className="grid-content horizantalContentRight">6B</div>
+            </div>
+          </div>
         </section>
       </div>
     </body>
