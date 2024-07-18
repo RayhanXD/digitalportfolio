@@ -333,6 +333,8 @@ body {
 
           div {
 
+            display: flex;
+            align-items: center;
             overflow: hidden;
             background-image: url('../public/blackfolder.png'); /* Use the PUBLIC_URL placeholder */
             background-size: cover; /* Cover the entire space of the element */
@@ -345,9 +347,8 @@ body {
 
             ul {
 
+              padding-top: 15%;
               list-style-type: square;
-              padding: 10;
-              padding-top: 20%;
               opacity: .75;
 
               li {
